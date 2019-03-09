@@ -4,7 +4,7 @@
 const argv = require('yargs').argv;
 const fse = require('fs-extra');
 const path = require('path');
-const { generatePackageJson, generateReadme } = require('../lib/generateFiles');
+const { generatePackageJson } = require('../lib/generateFiles');
 
 const logRed = (...args) => console.log('\x1b[31m', ...args, '\x1b[0m');
 const logGreen = (...args) => console.log('\x1b[32m', '✓', ...args, '\x1b[0m');
@@ -50,14 +50,12 @@ async function copyFilesToTarget(target) {
 async function writeFiles(target) {
 	const basename = path.basename(target);
 	const packageJson = generatePackageJson(basename);
-	const readme = generateReadme(basename);
 
 	try {
 		await Promise.all([
 			fse.outputJSON(`${target}/package.json`, packageJson, {
 				spaces: '\t',
 			}),
-			fse.outputFile(`${target}/README.md`, readme),
 		]);
 	} catch (error) {
 		throw new Error(`An error occured generating files.`);
