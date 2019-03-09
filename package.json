@@ -1,6 +1,6 @@
 {
 	"name": "@leggsimon/create-next-app",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Scaffolds a next app",
 	"author": "Simon Legg",
 	"keywords": [
