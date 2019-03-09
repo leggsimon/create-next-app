@@ -1,0 +1,33 @@
+{
+	"name": "@leggsimon/create-next-app",
+	"version": "0.0.0",
+	"description": "Scaffolds a next app",
+	"author": "Simon Legg",
+	"keywords": [
+		"create",
+		"next.js",
+		"scaffold",
+		"generate",
+		"initializer"
+	],
+	"license": "ISC",
+	"bin": "bin/create.js",
+	"homepage": "https://github.com/leggsimon/create-next-app#readme",
+	"bugs": {
+		"url": "https://github.com/leggsimon/create-next-app/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/leggsimon/create-next-app"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 0"
+	},
+	"dependencies": {
+		"fs-extra": "^7.0.1",
+		"yargs": "^13.2.1"
+	},
+	"devDependencies": {
+		"np": "^4.0.2"
+	}
+}
